@@ -1,0 +1,15 @@
+syntax = "proto3";
+package gRPC_project;
+
+message Key {
+  int32 key_id = 1;
+  string key = 2;
+}
+
+service setKeyService {
+    rpc set_key(Key) returns (Key);
+}
+
+service getKeyService {
+    rpc get_key(Key) returns (Key);
+}
